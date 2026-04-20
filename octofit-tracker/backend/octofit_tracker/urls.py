@@ -3,6 +3,8 @@ import os
 from django.contrib import admin
 from django.urls import include, path
 from django.views.generic import RedirectView
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 from rest_framework.routers import SimpleRouter
 
 from .views import (
@@ -10,7 +12,6 @@ from .views import (
     LeaderboardEntryViewSet,
     TeamViewSet,
     WorkoutViewSet,
-    api_root,
     UserProfileViewSet,
 )
 
@@ -19,6 +20,17 @@ if codespace_name:
     base_url = f"https://{codespace_name}-8000.app.github.dev"
 else:
     base_url = "http://localhost:8000"
+
+
+@api_view(['GET'])
+def api_root(request, format=None):
+    return Response({
+        'users': f'{base_url}/api/users/',
+        'teams': f'{base_url}/api/teams/',
+        'activities': f'{base_url}/api/activities/',
+        'leaderboard': f'{base_url}/api/leaderboard/',
+        'workouts': f'{base_url}/api/workouts/',
+    })
 
 router = SimpleRouter()
 router.register('users', UserProfileViewSet, basename='user')
