@@ -1,0 +1,317 @@
+.app-shell {
+  min-height: 100vh;
+  color: #14324a;
+  background:
+    radial-gradient(circle at top left, rgba(249, 168, 38, 0.24), transparent 26%),
+    radial-gradient(circle at bottom right, rgba(24, 110, 122, 0.18), transparent 24%),
+    linear-gradient(180deg, #fff9ef 0%, #eef7f7 46%, #f6fbff 100%);
+}
+
+.app-header {
+  background:
+    radial-gradient(circle at top right, rgba(255, 206, 92, 0.38), transparent 26%),
+    linear-gradient(135deg, #083b4c, #0e5f68 50%, #1e7a74 100%);
+  color: #f5fbff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.app-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.app-logo {
+  width: 92px;
+  height: 92px;
+  object-fit: contain;
+  border-radius: 1.15rem;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 0.5rem;
+  box-shadow: 0 12px 30px rgba(3, 20, 31, 0.22);
+}
+
+.app-hero-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 247, 230, 0.95));
+  color: #14324a;
+}
+
+.app-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #ffd271;
+}
+
+.app-subtitle {
+  max-width: 42rem;
+  color: rgba(245, 251, 255, 0.88);
+}
+
+.app-navbar {
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid rgba(20, 50, 74, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.app-navbar .navbar-brand {
+  color: #0d5161;
+}
+
+.app-nav-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  background: linear-gradient(180deg, #fff7e4, #eaf8f7);
+  padding: 0.2rem;
+}
+
+.app-navbar .navbar-toggler {
+  border-color: rgba(13, 81, 97, 0.25);
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.app-navbar .navbar-nav .nav-link {
+  font-weight: 600;
+  color: #14324a;
+  background: linear-gradient(180deg, #f5f9fc, #e7eff6);
+  border: 1px solid rgba(20, 50, 74, 0.08);
+  transition: all 160ms ease;
+}
+
+.app-navbar .navbar-nav .nav-link:hover,
+.app-navbar .navbar-nav .nav-link:focus {
+  color: #0b5463;
+  background: linear-gradient(180deg, #fff4d8, #ffe7ad);
+  transform: translateY(-1px);
+}
+
+.app-navbar .navbar-nav .nav-link.active {
+  background: linear-gradient(135deg, #0b5463, #14717f);
+  color: #f8fafc;
+  box-shadow: 0 10px 22px rgba(11, 84, 99, 0.18);
+}
+
+.app-content {
+  position: relative;
+}
+
+.resource-panel {
+  animation: fadeUp 280ms ease-out;
+}
+
+.resource-panel .card {
+  border: 1px solid rgba(20, 50, 74, 0.08);
+  border-radius: 1rem;
+  box-shadow: 0 18px 44px rgba(20, 50, 74, 0.08);
+}
+
+.resource-meta {
+  color: #4b6277;
+}
+
+.resource-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resource-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.resource-table-card .table {
+  margin-bottom: 0;
+}
+
+.resource-table-card .card-header {
+  background: linear-gradient(180deg, #ffffff, #f6fbff);
+}
+
+.resource-table-card .table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: rgba(18, 120, 133, 0.04);
+}
+
+.resource-table-card .table-hover > tbody > tr:hover > * {
+  background-color: rgba(249, 168, 38, 0.12);
+}
+
+.resource-table-card thead th {
+  white-space: nowrap;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #31526a;
+  background: linear-gradient(180deg, #dff4f2, #cdebe8);
+  border-bottom-color: rgba(20, 50, 74, 0.14);
+}
+
+.resource-table-card tbody td {
+  color: #153147;
+}
+
+.resource-empty,
+.resource-error,
+.resource-loading {
+  border-radius: 0.85rem;
+}
+
+.resource-summary-card {
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
+}
+
+.resource-summary-number {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: #0e6671;
+}
+
+.resource-modal-backdrop {
+  background: rgba(2, 6, 23, 0.55);
+}
+
+.resource-modal {
+  display: block;
+}
+
+.resource-modal .modal-content {
+  border: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.resource-modal .modal-header {
+  background: linear-gradient(135deg, #0b5463, #14717f);
+  color: #f8fafc;
+}
+
+.resource-modal .btn-close {
+  filter: invert(1);
+}
+
+.resource-detail-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.resource-detail-item {
+  padding: 1rem;
+  border-radius: 0.85rem;
+  background: linear-gradient(180deg, #fefefe, #f6fbff);
+  border: 1px solid #d9e8f0;
+}
+
+.resource-detail-item small {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #5c7286;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0f6773, #1591a1);
+  border-color: #0f6773;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(135deg, #0d5862, #117b89);
+  border-color: #0d5862;
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #f2a93b, #f8c15d);
+  border-color: #f2a93b;
+  color: #213547;
+}
+
+.btn-warning:hover,
+.btn-warning:focus {
+  background: linear-gradient(135deg, #e09b30, #efb94f);
+  border-color: #e09b30;
+  color: #213547;
+}
+
+.btn-outline-secondary {
+  color: #28526b;
+  border-color: #8ca8bb;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  background: #28526b;
+  border-color: #28526b;
+}
+
+.link-primary,
+.card a,
+.table a,
+.resource-panel a {
+  color: #0d6672;
+}
+
+.link-primary:hover,
+.card a:hover,
+.table a:hover,
+.resource-panel a:hover {
+  color: #0a5460;
+}
+
+.form-label,
+.h1,
+.h4,
+.h5,
+.display-4,
+h1,
+h2,
+h3,
+h4 {
+  color: #133a54;
+}
+
+.app-header .display-4,
+.app-header .app-eyebrow {
+  color: inherit;
+}
+
+.form-control {
+  border-color: #c7d7e2;
+  color: #14324a;
+}
+
+.form-control:focus {
+  border-color: #1a8795;
+  box-shadow: 0 0 0 0.25rem rgba(26, 135, 149, 0.16);
+}
+
+@media (max-width: 767.98px) {
+  .app-brand-row {
+    align-items: flex-start;
+  }
+
+  .app-logo {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
